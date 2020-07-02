@@ -14,6 +14,17 @@ test_function_too() {
     do
         echo 'Function' $arg
     done
+
+    for arg in $*
+    do
+        echo 'Function' $arg
+    done
+
+    while (( "$#" ))
+    do
+        echo 'Function' $1
+        shift
+    done
 }
 
-test_function_too arg3 arg4
+test_function_too arg3 arg4 arg1
